@@ -1,0 +1,20 @@
+name: ESLint Check
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install
+      - uses: github/super-linter@v4.1.0
+        with:
+          lint-tools: "eslint"
+          eslint-args: "--ext .js --no-ignore --no-inline-config"
