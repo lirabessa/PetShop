@@ -3,8 +3,10 @@ const Funcionarios = require ('../../Modelos/funcionarioModel')
 class funcionarioController {
     async create (req, res){
         try {
+            console.log("foi")
             const criarFuncionario = await Funcionarios.create(req.body);
         return res.status(201).json({message: "Funcionario criado :)"});
+        
         } catch (error) {
             res.status(500).json({message: "erro"})
         }

@@ -9,7 +9,7 @@ routes.get('/', (req,res) => {
     return res.status(200).json({message: "Servidor online"})
 });
 
-routes.post('/funcionario' , funcionarioController.create )
+routes.post('/funcionario' , funcionarioController.create)
 routes.get('/funcionarios' , funcionarioController.find)
 routes.get('/funcionario/:id' , funcionarioController.findOne)
 routes.delete('/funcionario/:id' , funcionarioController.destroy)

@@ -16,10 +16,7 @@ const Funcionario = new Schema(
         cep: String
       },
       telefone:String,
-      email:{
-        type: String,
-        required: [true, 'O campo email é obrigatório']
-      },
+      email:String,
       cpf: String
 });
 
